@@ -1,27 +1,21 @@
 package com.parsefile;
 
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellValue;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.String;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.lang.Object;
 
 public class ParseFileXLS  {
 
 	public static ArrayList GetColumn() throws IOException {
 		ArrayList list = new ArrayList();
-
 		File excel = new File("C:\\temp\\file1.xlsx");
 		FileInputStream fis = new FileInputStream(excel);
 		XSSFWorkbook book = new XSSFWorkbook(fis);
