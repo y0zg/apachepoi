@@ -22,7 +22,7 @@ public class DoExcel {
 	public static ArrayList GetColumn() throws IOException {
 		ArrayList list = new ArrayList();
 
-		File excel = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\file1.xlsx");
+		File excel = new File("C:\\file1.xlsx");
 		FileInputStream fis = new FileInputStream(excel);
 		XSSFWorkbook book = new XSSFWorkbook(fis);
 		XSSFSheet sheet = book.getSheet("Sheet1");
@@ -39,7 +39,7 @@ public class DoExcel {
 	public static ArrayList AddColumn(ArrayList args) throws IOException {
 		ArrayList columns = args;
 
-		File excel = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\file1.xlsx");
+		File excel = new File("C:\\file1.xlsx");
 		FileInputStream fis = new FileInputStream(excel);
 		XSSFWorkbook book = new XSSFWorkbook(fis);
 		XSSFSheet sheet = book.getSheet("Sheet1");
@@ -52,7 +52,7 @@ public class DoExcel {
 			header.createCell(i).setCellValue(col);
 		}
 
-		File excelOut = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\fileOut1.xlsx");
+		File excelOut = new File("C:\\fileOut1.xlsx");
 		FileOutputStream fileOut = new FileOutputStream(excelOut);
 		book.write(fileOut);
 		fileOut.close();
@@ -64,7 +64,7 @@ public class DoExcel {
 	public static ArrayList DelColumn(ArrayList args) throws IOException {
 		ArrayList columns = args;
 
-		File excel = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\file1.xlsx");
+		File excel = new File("C:\\file1.xlsx");
 		FileInputStream fis = new FileInputStream(excel);
 		XSSFWorkbook book = new XSSFWorkbook(fis);
 		XSSFSheet sheet = book.getSheet("Sheet1");
@@ -79,7 +79,7 @@ public class DoExcel {
 			}
 		}
 
-		File excelOut = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\fileOut1.xlsx");
+		File excelOut = new File("C:\\fileOut1.xlsx");
 		FileOutputStream fileOut = new FileOutputStream(excelOut);
 		book.write(fileOut);
 		fileOut.close();
@@ -91,7 +91,7 @@ public class DoExcel {
 		ArrayList columns = args;
 		ArrayList allcol = GetColumn();
 
-		File excel = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\file1.xlsx");
+		File excel = new File("C:\\file1.xlsx");
 		FileInputStream fis = new FileInputStream(excel);
 		XSSFWorkbook book = new XSSFWorkbook(fis);
 		XSSFSheet sheet = book.getSheet("Sheet1");
@@ -108,7 +108,7 @@ public class DoExcel {
 			}
 		}
 
-		File excelOut = new File("C:\\Users\\SMMatsak\\test_scripts\\inbox\\fileOut1.xlsx");
+		File excelOut = new File("C:\\fileOut1.xlsx");
 		FileOutputStream fileOut = new FileOutputStream(excelOut);
 		book.write(fileOut);
 		fileOut.close();
